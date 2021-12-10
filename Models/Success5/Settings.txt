@@ -1,0 +1,39 @@
+Name: default
+
+episodes = 1000
+T = 20
+critic = <class 'RLlib.Agents.NNs.RBFCritic'>
+actor = <class 'RLlib.Agents.NNs.OptimalControl'>
+x0Max = 3.141592653589793
+offline_training = True
+breakFlag = True
+disturber = <class 'NoneType'>
+trace_P = False
+  Constants that affect Dynamics
+L         1.0
+g         9.82
+m         1.0
+my        0.01
+
+  Constants that affect Agents
+R         0.04
+tau       1.0
+gamma_d   0.22
+uMax      5
+wMax      1
+
+  Constants that affect Learning
+dt        0.02
+gamma     0.98
+kappa     0.1
+lambda    0.8163265306122449
+C_lr      0.0005
+A_lr      0.1
+optimizer SGD
+
+  Constants that affect Noise
+tau_n     1
+sigma0    0.5
+noise0    0
+seed      None
+

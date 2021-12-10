@@ -1,0 +1,36 @@
+pPlot has tau = 2, so it doesnt match!
+
+description = "Linear Critic, 1000 episodes, optimal ".format(episodes)+\
+    "control. Online training, 20 seconds, "+\
+    "reward = -x^2 -Ru^2 + gamma^2*w^2"+\
+    "breakFlag = False, optimal disturber, x0Max = 0.1., 1/dt*dV/dw. "+\
+
+C_lr = 0.001
+Rvals = [0.1]
+tauvals = [1]
+
+constants['L'] = 1.
+    constants['g'] = 9.82
+    constants['m'] = 1.
+    constants['my'] = 0.01
+
+    # These are constants that influence the agents
+    constants['R'] = 0.04
+    constants['tau'] = 1
+    constants['uMax'] = 5
+    constants['gamma_d'] = 0.22
+
+    # Constants for learning
+    constants['dt'] = 0.02
+    constants['gamma'] = 1 - constants['dt']/constants['tau']
+    constants['kappa'] = 0.1
+    constants['lambda'] = (1 - constants['dt']/constants['kappa'])/constants['gamma']
+    constants['C_lr'] = 0.1
+    constants['A_lr'] = 0.1
+    constants['optimizer'] = "SGD"  # "Adam" or "SGD"
+
+    # Constants for noise in learning process
+    constants['tau_n'] = 1
+    constants['sigma0'] = 0.5
+    constants['noise0'] = 0
+    constants['seed'] = None  # None to disable, any integer to enable

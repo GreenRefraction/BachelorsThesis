@@ -1,0 +1,29 @@
+#no w filtering#
+Name: Test1
+Linear Critic, 1000 episodes, optimal control. Online training, 20 seconds, reward = -x^2 -Ru^2 + gamma^2*w^2, -0.2**2 - R*uMax**2 + gamma_d**2*w**2, breakFlag = True, disturber = None, x0Max = 0.1., dt*dV/dw.   Constants that affect Dynamics
+L         1.0
+g         9.82
+m         1.0
+my        0.01
+
+  Constants that affect Agents
+R         0.1
+tau       1
+gamma_d   0.22
+uMax      5
+
+  Constants that affect Learning
+dt        0.02
+gamma     0.98
+kappa     0.1
+lambda    0.8163265306122449
+C_lr      1
+A_lr      0.1
+optimizer SGD
+
+  Constants that affect Noise
+tau_n     1
+sigma0    0.5
+noise0    0
+seed      None
+

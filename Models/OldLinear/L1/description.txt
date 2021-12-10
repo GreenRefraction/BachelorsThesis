@@ -1,0 +1,32 @@
+Wrong sign on param.grad update...
+--- old etrace with dt factor infron of dVdw ----------
+
+Linear, 1000 episodes, R = 0.1, tau = 2, break false, online, 
+x0Max = 0.1, optimal control & disturber, dt*dVdw
+
+
+constants['L'] = 1.
+    constants['g'] = 9.82
+    constants['m'] = 1.
+    constants['my'] = 0.01
+
+    # These are constants that influence the agents
+    constants['R'] = 0.01
+    constants['tau'] = 0.5
+    constants['uMax'] = 5
+    constants['gamma_d'] = 0.22
+
+    # Constants for learning
+    constants['dt'] = 0.02
+    constants['gamma'] = 1 - constants['dt']/constants['tau']
+    constants['kappa'] = 0.1
+    constants['lambda'] = (1 - constants['dt']/constants['kappa'])/constants['gamma']
+    constants['C_lr'] = 0.1
+    constants['A_lr'] = 0.1
+    constants['optimizer'] = "SGD"  # "Adam" or "SGD"
+
+    # Constants for noise in learning process
+    constants['tau_n'] = 1
+    constants['sigma0'] = 0.5
+    constants['noise0'] = 0
+    constants['seed'] = 1  
